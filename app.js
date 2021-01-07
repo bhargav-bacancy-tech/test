@@ -11,6 +11,6 @@ app.get('/', function (req, res) {
     res.send('Hello World!'); // This will serve your request to '/'.
 });
   
-app.listen(3306, function () {
-    console.log('Test app listening on port 3306!');
+app.listen(3000, function () {
+    console.log('Test app listening on port 3000!');
 });
