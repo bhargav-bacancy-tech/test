@@ -1,8 +1,8 @@
 var express = require('express');
-const conn =require('./connection');
-const sequelize = require('sequelize');
+const sequelize =require('./connection');
+const Sequelize = require('sequelize');
 var app = express();
-conn
+sequelize
         .authenticate()
         .then(() => {
             console.log('Connection has been established successfully.');
