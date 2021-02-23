@@ -1,13 +1,14 @@
 var express = require('express');
 const sequelize =require('./connection');
 const Sequelize = require('sequelize');
-const User = require('./user')
-const cruduser = require('./crud_user')
+const User = require('./Models/user');
+const basic_routes = require('./Routes/basic_routes');
 var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.json()); 
 //app.use(User)
-app.use('/',cruduser);
+app.use('/', basic_routes);
+
 sequelize
         .authenticate()
         .then(() => {

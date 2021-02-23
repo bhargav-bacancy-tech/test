@@ -1,6 +1,6 @@
 var express = require('express');
 const Sequelize = require('sequelize');
-const seuelize =require('./connection');
+const seuelize =require('../connection');
 const User = seuelize.define('users',{
     id: {
         type:Sequelize.INTEGER,
